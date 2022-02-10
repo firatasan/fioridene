@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="navigationjson.controller.View1"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+
+	<App id="app">
+		<pages>
+			<Page id="_IDGenPage1" title="Tableview">
+				<content>
+					<Table class="sapUiSizeCompact" id="table1" includeItemInSelection="true" items="{path: 'DataModel>/MaterialCodeSet'}" mode="MultiSelect"
+						selectionChange="onselectionChange">
+						<columns>
+							<Column id="_IDGenColumn1">
+								<Label id="_IDGenLabel1" text="Product Name"/>
+							</Column>
+							<Column id="_IDGenColumn2">
+								<Label id="_IDGenLabel2" text="Supplier"/>
+							</Column>
+							<Column id="_IDGenColumn3">
+								<Label id="_IDGenLabel3" text="Price"/>
+							</Column>
+							<Column id="_IDGenColumn4">
+								<Label id="_IDGenLabel4" text="Units Ordered"/>
+							</Column>
+						</columns>
+						<ColumnListItem id="_IDGenColumnListItem1" press="onPress" type="Navigation">
+							<Text id="_IDGenText1" text="{DataModel>Name}"></Text>
+							<Text id="_IDGenText2" text="{DataModel>Supplier}"></Text>
+							<Text id="_IDGenText3" text="{DataModel>Price}"></Text>
+							<Text id="_IDGenText4" text="{DataModel>Units}"></Text>
+						</ColumnListItem>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

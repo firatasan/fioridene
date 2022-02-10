@@ -1,0 +1,21 @@
+<mvc:View 
+xmlns="sap.m" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns:core="sap.ui.core" 
+xmlns:f="sap.ui.layout.form" 
+xmlns:l="sap.ui.layout" 
+controllerName="ehliyet.controller.deneme3" 
+busyIndicatorDelay="0">
+
+
+<Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="deneme3" showHeader="true" title="Material Code Deneme" showNavButton="true" navButtonPress=".onNavBack3" class="sapUiResponsiveContentPadding" cd:w5g.dt.context="ZFRT_MATNR_VALUE_HELP_SRV&gt;/MaterialCodeSet">
+
+<content>
+
+
+
+
+
+</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,33 @@
+<mvc:View controllerName="navigationjson.controller.View2" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page id="_IDGenPage1" navButtonPress="onNavBack" showNavButton="true" title="Tableview2">
+				<content>
+					<Table class="sapUiSizeCompact" id="abc" items="{path: 'navigationModel>/Objects'}">
+						<columns>
+							<Column id="_IDGenColumn1" width="11rem">
+								<Label id="_IDGenLabel1" text="Product Name"/>
+							</Column>
+							<Column id="_IDGenColumn2" width="11rem">
+								<Label id="_IDGenLabel2" text="Supplier"/>
+							</Column>
+							<Column id="_IDGenColumn3" hAlign="End" width="6rem">
+								<Label id="_IDGenLabel3" text="Price"/>
+							</Column>
+							<Column id="_IDGenColumn4" hAlign="End" width="15rem">
+								<Label id="_IDGenLabel4" text="Units Ordered"/>
+							</Column>
+						</columns>
+						<ColumnListItem id="_IDGenColumnListItem1" press="onPress" type="Navigation">
+							<Text id="_IDGenText1" text="{navigationModel>Name}"></Text>
+							<Text id="_IDGenText2" text="{navigationModel>Supplier}"></Text>
+							<Text id="_IDGenText3" text="{navigationModel>Price}"></Text>
+							<Text id="_IDGenText4" text="{navigationModel>Units}"></Text>
+						</ColumnListItem>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

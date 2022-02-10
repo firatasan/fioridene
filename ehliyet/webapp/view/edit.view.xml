@@ -1,0 +1,66 @@
+<mvc:View 
+xmlns="sap.m" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns:f="sap.ui.layout.form" 
+controllerName="ehliyet.controller.edit" busyIndicatorDelay="0"><Page id="employeePage" title="Kayıt Detaylari {Ad} {Soyad}" showNavButton="true" navButtonPress=".onNavBack2" class="sapUiResponsiveContentPadding">
+		<content><Panel id="employeePanel" width="auto" class="sapUiNoContentPadding">
+				<headerToolbar>
+					<Toolbar id="_IDGenToolbar1">
+						<Title id="_IDGenTitle1" text="{Tckimlikno} Kimlik Numaralı Kişinin Detay Bilgileri" level="H2"/>
+						<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+
+
+					<f:SimpleForm id="_IDGenSimpleForm1" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+						<f:content>                        
+							<Label id="_IDGenLabel1" text="TC Kimlik Numarası"/>
+							<Text id="_IDGenText1" text="{Tckimlikno}"/>
+							<Label id="_IDGenLabel2" text="Soyad"/>
+							<Text id="_IDGenText2" text="{Soyad}"/>
+							<Label id="_IDGenLabel3" text="Ad"/>
+							<Text id="_IDGenText3" text="{Ad}"/>
+							<Label id="_IDGenLabel4" text="Dogrum Tarihi"/>
+							<Text id="_IDGenText4" text="{Dogumtarihi}"/>
+							<Label id="_IDGenLabel5" text="Dogum Yeri"/>
+							<Text id="_IDGenText5" text="{Dogumyeri}"/>
+							<Label id="_IDGenLabel6" text="Adress"/>
+							<Text id="_IDGenText6" text="{Adress}"/>
+							<Label id="_IDGenLabel7" text="Mezuniyet"/>
+							<Text id="_IDGenText7" text="{Mezuniyet}"/>
+                            <Label id="_IDGenLabel8" text="Meslek"/>
+							<Text id="_IDGenText8" text="{Meslek}"/>
+                            <Label id="_IDGenLabel9" text="Ehliyet Sinifi"/>
+							<Text id="_IDGenText9" text="{Ehliyetsinifi}"/>
+                            <Label id="_IDGenLabel10" text="Ehliyet Talep Türü"/>
+							<Text id="_IDGenText10" text="{Ehliyettalep}"/>
+						</f:content>
+					</f:SimpleForm>
+
+
+<Button xmlns="sap.m" text="Degistir" id="button0" icon="sap-icon://edit" press=".onOpenDialog" class="sapUiTinyMargin"/>
+<Button xmlns="sap.m" text="Ana Menuye Dön" id="button1" icon="sap-icon://edit" press=".onNavBack2" class="sapUiTinyMargin"/>
+
+
+
+<HBox width="50%" id="hbox1">
+<!-- 	<ImageContent id="_IDGenImageContent1" class="sapUiLargeMarginTop sapUiLargeMarginBottom" src="{Foto}" description="Profile image" press="press">
+	</ImageContent> -->
+
+
+<Image id="_IDGenImage1" src="{Foto}" width="20em" class="sapUiLargeMarginTop sapUiLargeMarginBottom"/>
+
+
+
+
+</HBox>
+	
+
+
+
+				</content>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

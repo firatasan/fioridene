@@ -1,0 +1,74 @@
+<mvc:View 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+xmlns:core="sap.ui.core" 
+xmlns:plugins="sap.m.plugins" 
+controllerName="ehliyet.controller.View1" 
+displayBlock="true">
+
+    <Toolbar id="_IDGenToolbar1">
+				<Button id="_IDGenButton1" type="Back" press=".onNavBack"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer1" visible="false"/>
+			<content>
+			    <Title xmlns="sap.m" id="_IDGenTitle2" text="Ehliyet Talepleri Alınan Kişiler   " titleStyle="H3" busyIndicatorSize="Auto" textAlign="Center"/>
+			</content>
+			</Toolbar>
+
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="page" title="" cd:w5g.dt.context="/EHLIYETSet">
+
+
+                <content>
+
+                        <VBox width="100%" direction="Column" id="vbox1">
+                        <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{/EHLIYETSet}" alternateRowColors="true" width="60%" class="sapUiSmallMargin">
+                        		<dependents>
+			<plugins:ColumnResizer id="_IDGenColumnResizer1"/>
+		</dependents>
+
+                            <items>
+                                <ColumnListItem type="Active" id="item0" press=".onListItemPressed">
+                                    <cells>
+                                        <Text text="{Tckimlikno}" id="text3"/>
+                                        <Text text="{Ad}" id="text4"/>
+                                        <Text text="{Soyad}" id="text6"/>
+
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                            <columns>
+                                <Column id="column0">
+                                    <header>
+                                        <Label text="TC Kimlik No" id="label3"/>
+                                    </header>
+                                </Column>
+                                <Column id="column1">
+                                    <header>
+                                        <Label text="Ad" id="label4"/>
+                                    </header>
+                                </Column>
+                                 <Column id="column2">
+                                    <header>
+                                        <Label text="Soyad" id="label6"/>
+                                    </header>
+                                </Column>
+                                </columns>
+                                
+                            </Table>
+                                
+
+                        </VBox>
+
+
+                    <Button xmlns="sap.m" text="Ana Menuye Dönüs" id="button1_12" icon="sap-icon://sys-cancel-2" press=".onNavBack" class="sapUiTinyMargin"/>
+
+                    </content>
+
+
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

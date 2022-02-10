@@ -1,0 +1,107 @@
+<!-- <core:FragmentDefinition xmlns="sap.m"
+xmlns:core="sap.ui.core">
+<Dialog id="openDialog" title="Hello {/employee/name}">
+<beginButton>
+<Button id="_IDGenButton1" text="Ok" press=".closeDialog"/>
+</beginButton>
+</Dialog>
+</core:FragmentDefinition> -->
+
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:f="sap.ui.layout.form"
+xmlns:l="sap.ui.layout"
+xmlns:core="sap.ui.core"
+id="inputdialog">
+    <Dialog id="openDialog" title="Dialog box">
+    <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+    <f:SimpleForm
+         id="SimpleFormDisplay354"
+         editable="true"
+         layout="ResponsiveGridLayout"
+         title="Change the data"
+         labelSpanXL="3"
+     labelSpanL="3"
+         labelSpanM="3"
+         labelSpanS="12"
+         adjustLabelSpan="false"
+         emptySpanXL="4"
+         emptySpanL="4"
+         emptySpanM="4"
+         emptySpanS="0"
+     columnsXL="1"
+         columnsL="1"
+         columnsM="1"
+         singleContainerFullSize="false">
+    <f:content>
+
+
+
+
+
+                    
+
+
+
+
+
+
+    
+							<Label id="_IDGenLabel123"  text="TC Kimlik Numarası"/>
+                            <Input id="_IDGenInput1"  xmlns="sap.m" value="{Tckimlikno}" class="sapUiTinyMarginEnd"/>
+							<Label id="_IDGenLabel223"  text="Soyad"/>
+							<Input id="_IDGenInput2"  xmlns="sap.m" value="{Soyad}" class="sapUiTinyMarginEnd"/>
+							<Label id="_IDGenLabel323"  text="Ad"/>
+							<Input id="_IDGenInput3"  xmlns="sap.m" value="{Ad}" class="sapUiTinyMarginEnd"/>
+							<Label id="_IDGenLabel423"  text="Dogrum Tarihi"/>
+                            <DatePicker id="_IDGenDatePicker1" xmlns="sap.m" placeholder="{Dogumtarihi}" class="sapUiTinyMarginEnd"/>
+							<Label id="_IDGenLabel523"  text="Dogum Yeri"/>
+                            <Input id="_IDGenInput4"  xmlns="sap.m" value="{Dogumyeri}" class="sapUiTinyMarginEnd"/>
+							<Label id="_IDGenLabel623"  text="Adress"/>
+                            <Input id="_IDGenInput5"  xmlns="sap.m" value="{Adress}" class="sapUiTinyMarginEnd"/>
+							<Label id="_IDGenLabel723"  text="Mezuniyet"/>
+                            <Input id="_IDGenInput6"  xmlns="sap.m" value="{Mezuniyet}" class="sapUiTinyMarginEnd"/>
+                            <Label id="_IDGenLabel823"  text="Meslek"/>
+                            <Input id="_IDGenInput7"  xmlns="sap.m" value="{Meslek}" class="sapUiTinyMarginEnd"/>
+
+ 
+
+
+                            <Label id="_IDGenLabel923" text="Ehliyet Sinifi"/>
+                       <ComboBox xmlns="sap.m" id="box0" placeholder="Ehliyet Sinifi" selectedKey="{Ehliyetsinifi}" required="true">
+                            <items>
+                                <core:Item id="_IDGenItem1" xmlns:core="sap.ui.core" key="A" text="A Sinifi" />
+                                <core:Item id="_IDGenItem2" xmlns:core="sap.ui.core" key="B" text="B Sinifi" />
+                                <core:Item id="_IDGenItem3" xmlns:core="sap.ui.core" key="C" text="C Sinifi" />
+                                <core:Item id="_IDGenItem4" xmlns:core="sap.ui.core" key="D" text="D Sinifi" />
+                                <core:Item id="_IDGenItem5" xmlns:core="sap.ui.core" key="E" text="E Sinifi" />
+                                <core:Item id="_IDGenItem6" xmlns:core="sap.ui.core" key="G" text="G Sinifi" />
+                                <core:Item id="_IDGenItem7" xmlns:core="sap.ui.core" key="H" text="H Sinifi" />
+                                </items>
+                            
+                        </ComboBox>
+
+                           <Label id="_IDGenLabel1023" text="Ehliyet Talep Türü"/>
+                            <ComboBox xmlns="sap.m" id="box1" placeholder="Talep Türü" selectedKey="{Ehliyettalep}" required="true">
+                            <items>
+                                <core:Item xmlns:core="sap.ui.core" key="Acil" text="Acil" id="item2"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Cok Acil" text="Cok Acil" id="item3"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Bakan Ref." text="Bakan Ref." id="item4"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Torpilli" text="Torpilli" id="item5"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Normal" text="Normal" id="item6"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Dusuk" text="Dusuk" id="item7"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Kedi" text="Kedi" id="item8"/>
+                                </items>
+                            
+                        </ComboBox>
+
+  
+    </f:content>
+    </f:SimpleForm>
+    </VBox>
+<buttons>
+    <Button id="_IDGenButton1" text="Update" press=".updateDialog"/>
+    <Button id="_IDGenButton2" text="Cancel" press=".closeDialog"/>
+</buttons>
+</Dialog>
+</core:FragmentDefinition>

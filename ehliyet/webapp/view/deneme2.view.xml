@@ -1,0 +1,30 @@
+<mvc:View 
+xmlns="sap.m" 
+xmlns:mvc="sap.ui.core.mvc" 
+xmlns:core="sap.ui.core" 
+xmlns:f="sap.ui.layout.form" 
+xmlns:l="sap.ui.layout"
+controllerName="ehliyet.controller.deneme2" busyIndicatorDelay="0">
+
+
+<Page id="deneme2" showHeader="true" title="Material Code Deneme" showNavButton="true" navButtonPress=".onNavBack3" class="sapUiResponsiveContentPadding" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" cd:w5g.dt.context="ZFRT_MATNR_VALUE_HELP_SRV&gt;/MaterialCodeSet">
+
+<content>
+
+	<l:VerticalLayout id="_IDGenVerticalLayout1"
+			class="sapUiContentPadding"
+			width="100%">
+		<Button id="_IDGenButton1"
+				text="Search Contains"
+				press=".handleOpenDialogSearchContains" />
+		<Button id="_IDGenButton2"
+				text="Search Any Word Starts With"
+				press=".handleOpenDialogSearchWordsStartWith" />
+		<Button id="_IDGenButton3"
+				text="Search Case Sensitive Contains"
+				press=".handleOpenDialogCustomSearch" />
+	</l:VerticalLayout>
+
+</content>
+	</Page>
+</mvc:View>

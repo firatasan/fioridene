@@ -1,0 +1,33 @@
+<mvc:View 
+xmlns="sap.m" 
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:core="sap.ui.core"  
+xmlns:f="sap.ui.layout.form" 
+controllerName="ehliyet.controller.deneme" 
+busyIndicatorDelay="0">
+
+
+<Page id="deneme" showHeader="false" title="Material Code deneme {Ad} {Soyad}" showNavButton="true" navButtonPress=".onNavBack3" class="sapUiResponsiveContentPadding">
+
+<content>
+
+    <f:SimpleForm 
+    title="Selection Secreen"
+    id="SimpleForm1"
+    editable="true" 
+    layout="ResponsiveGridLayout"
+    xmlns:sap.ui.core="sap.ui.core" >
+        <f:content>
+        <Label text="Material Code" id="label0"/>
+		<MultiInput id="idInput" showValueHelp="true" width="200px" valueHelpRequest="handleF4CompanyCode"/>
+        </f:content>
+    </f:SimpleForm>
+
+    
+<VBox width="100%" direction="Column" id="vbox0_1641891866845">
+<Button xmlns="sap.m" text="Cikis" id="button1_1" icon="sap-icon://sys-cancel-2" press=".onNavBack" class="sapUiTinyMarginEnd"/>
+    </VBox>
+
+</content>
+	</Page>
+</mvc:View>

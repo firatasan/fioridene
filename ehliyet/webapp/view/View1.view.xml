@@ -1,0 +1,53 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ehliyet.controller.View1" displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="Ehliyet Uygulaması"> 
+
+                
+<!--                                     <Image src="https://www.kayseriilkhaber.com/images/haberler/trafik-tescil-sube-mudurlugunde-randevu-sistemine-gecildi.jpg" 
+                    width="10px" height="10px" id="image1" 
+                    class="sapUiSmallMarginBegin sapUiLargeMarginTop sapUiLargeMarginBottom"/> -->
+
+
+                <content>
+                    <VBox width="100%" direction="Column" id="vbox1">
+                        <items>
+                            <Text xmlns="sap.m" text="Merhaba. Ehliyet uygulamasına hoş geldiniz. Lütfen seçiminizi yapınız." id="text7" busyIndicatorSize="Large" class="sapUiSmallMargin"/>
+                        </items>
+                    </VBox><VBox width="100%" direction="Column" id="vbox2">
+                        <items><sap.ui.layout:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="layout0"><sap.ui.layout:content>
+                        <HBox width="100%" id="hbox0"><items><Button xmlns="sap.m" text="Yeni Ehliyet Talebi Oluştur" id="button1" icon="sap-icon://add" press=".onNavToCreate" class="sapUiTinyMargin"/>
+                        </items>
+                        </HBox>
+                        </sap.ui.layout:content></sap.ui.layout:HorizontalLayout>
+                            <VBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" width="100%" direction="Column" id="vbox2_copy">
+                                <items>
+                                    <Button xmlns="sap.m" text="Ehliyet Taleplerini Görüntüle" id="button2_copy" icon="sap-icon://show" press=".onNavToList" class="sapUiTinyMargin"/>
+                                    <Image src="https://pbs.twimg.com/media/FDgyTApWYAYnQWc?format=jpg&amp;name=large" width="140px" height="110px" id="image0" class="sapUiSmallMarginBegin sapUiLargeMarginTop sapUiLargeMarginBottom"/>
+                                    </items>
+                                
+                            </VBox>
+
+
+                            <VBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" width="100%" direction="Column" id="vbox4">
+                                <items>
+                                    <Button xmlns="sap.m" text="Deneme Sayfasina Git" id="button3" icon="sap-icon://show" press=".onNavToDeneme" class="sapUiTinyMargin"/>
+                                    <Button xmlns="sap.m" text="Deneme Sayfasina Git" id="button4" icon="sap-icon://show" press=".onNavToDeneme2" class="sapUiTinyMargin"/>
+                                    <Button xmlns="sap.m" text="Deneme Sayfasina Git" id="button5" icon="sap-icon://show" press=".onNavToDeneme3" class="sapUiTinyMargin"/>
+                                    </items>
+                                
+                            </VBox>
+                            
+                        </items>
+                    </VBox>
+
+
+                    <VBox width="100%" direction="Column" id="vbox3">
+                    </VBox>
+                </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

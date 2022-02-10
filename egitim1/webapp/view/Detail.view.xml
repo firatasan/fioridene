@@ -1,0 +1,96 @@
+<mvc:View
+    controllerName="com.nuwency.egitim1.egitim1.controller.Detail"
+    xmlns="sap.m"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <semantic:SemanticPage
+        id="detailPage"
+        busy="{detailView>/busy}"
+        busyIndicatorDelay="{detailView>/delay}">
+        <semantic:titleHeading>
+            <Title id="_IDGenTitle1"
+                text="{Vbeln} VBELN Numarali Sip Detaylari"
+                level="H2"/>
+        </semantic:titleHeading>
+        <semantic:headerContent>
+        <ObjectAttribute id="_IDGenObjectAttribute2" title="{Kunnr} Kunnr"/>
+            <!-- <ObjectAttribute id="_IDGenObjectAttribute1" title="{i18n>priceTitle}"/>   -->
+            <ObjectNumber id="_IDGenObjectNumber1"
+                unit="{Kunnr} NE" />
+        </semantic:headerContent>
+        <semantic:content>
+
+            <Table
+                id="lineItemsList"
+                width="auto"
+                items="{Kalemler}"
+                updateFinished=".onListUpdateFinished"
+                noDataText="{i18n>detailLineItemTableNoDataText}"
+                busyIndicatorDelay="{detailView>/lineItemTableDelay}">
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1">
+                        <Title
+                            id="lineItemsTitle"
+                            text="{detailView>/lineItemListTitle} DETAILVIEW 34."
+                            titleStyle="H3"
+                            level="H3"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="_IDGenColumn1">
+                        <Text id="_IDGenText1" text="{i18n>detailLineItemTableIDColumn}"/>
+                    </Column>
+                    <Column id="_IDGenColumn2"
+                        minScreenWidth="Tablet"
+                        demandPopin="true"
+                        hAlign="End">
+                        <Text id="_IDGenText2" text="{i18n>detailLineItemTableUnitNumberColumn}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1">
+                        <cells>
+                            <ObjectIdentifier id="_IDGenObjectIdentifier1"
+                                title="{Matnr} ST 54"
+                                text="{Posnr} ST 55"/>
+                            <ObjectNumber id="_IDGenObjectNumber2"
+                                number="{
+                                    path: 'Menge',
+                                    formatter: '.formatter.currencyValue'
+                                }"
+                                unit="{Meins} gardas" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </semantic:content>
+        <!--Semantic ShareMenu Buttons-->
+        <semantic:sendEmailAction>
+            <semantic:SendEmailAction
+                id="shareEmail"
+                press=".onSendEmailPress"/>
+        </semantic:sendEmailAction>
+
+        <semantic:closeAction>
+            <semantic:CloseAction
+                    id="closeColumn"
+                    press=".onCloseDetailPress"/>
+        </semantic:closeAction>
+
+        <semantic:fullScreenAction>
+            <semantic:FullScreenAction
+                    id="enterFullScreen"
+                    visible="{= !${device>/system/phone} &amp;&amp; !${appView>/actionButtonsInfo/midColumn/fullScreen}}"
+                    press=".toggleFullScreen"/>
+        </semantic:fullScreenAction>
+        <semantic:exitFullScreenAction>
+            <semantic:ExitFullScreenAction
+                    id="exitFullScreen"
+                    visible="{= !${device>/system/phone} &amp;&amp; ${appView>/actionButtonsInfo/midColumn/fullScreen}}"
+                    press=".toggleFullScreen"/>
+        </semantic:exitFullScreenAction>
+
+    </semantic:SemanticPage>
+
+</mvc:View>

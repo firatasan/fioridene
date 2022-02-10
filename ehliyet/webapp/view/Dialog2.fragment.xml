@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core">
+	<ViewSettingsDialog id="settingsDialog"
+			confirm="handleConfirm">
+		<filterItems >
+			<ViewSettingsFilterItem id="_IDGenViewSettingsFilterItem1" text="Matnr" key="1"  >
+				<items>
+					<ViewSettingsItem id="_IDGenViewSettingsItem1" text="{F4MatSet('58')}"  bindingContexts="{F4MatSet('58')}" key="1a" />
+					<ViewSettingsItem id="_IDGenViewSettingsItem2" text="Optical mouse OX3" key="1b" />
+					<ViewSettingsItem id="_IDGenViewSettingsItem3" text="Monitor" key="1c" />
+					<ViewSettingsItem id="_IDGenViewSettingsItem4" text="Keyboard (ultra flat)" key="1d" />
+					<ViewSettingsItem id="_IDGenViewSettingsItem5" text="Wireless keyboard" key="1e" />
+				</items>
+			</ViewSettingsFilterItem>
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

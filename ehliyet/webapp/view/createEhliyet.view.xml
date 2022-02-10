@@ -1,0 +1,80 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ehliyet.controller.createEhliyet" displayBlock="true">
+
+
+<!-- Asagidaki 3 satir code sayfa acilinca yukaridaki kisma navback ekliyor -->
+<!-- <MessagePage id="_IDGenMessagePage1"
+		showNavButton="true"
+		navButtonPress=".onNavBack"/> -->
+
+
+
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="page" showNavButton="true" navButtonPress=".onNavBack" title="Ehliyet Uygulaması" cd:w5g.dt.context="/EHLIYETSet" class="sapUiLargeMargin">
+                <content>
+                    <VBox width="100%" direction="Column" id="vbox1">
+                        <items>
+                            <Text xmlns="sap.m" text="Merhaba. Lütfen ehliyet basvurusuna iliskin verileri giriniz" id="text7" busyIndicatorSize="Large" class="sapUiTinyMargin"/>
+                        </items>
+
+                        </VBox>
+                    <VBox width="100%" direction="Column" id="vbox0">
+                    <items>
+                        <MaskInput mask="99999999999" placeholderSymbol="TC Kimlik No" placeholder="11 Haneli TC Kimlik No Giriniz {viewModel>/Tckimlikno}" id="input6" class="sapUiTinyMarginEnd"/>
+                    </items>
+                    </VBox>
+                    <VBox width="30%" direction="Column" id="_IDGenVBox1">
+<items>
+                    <Input xmlns="sap.m" value="Ad {viewModel>/Ad}" id="input7" required="true" class="sapUiTinyMarginEnd"/>
+                    <Input xmlns="sap.m" value="Soyad {viewModel>/Soyad}" id="input8" required="true" class="sapUiTinyMarginEnd"/>
+                    <DatePicker xmlns="sap.m" id="picker1" placeholder="Dogum Tarihi{Dogumtarihi}" required="true" class="sapUiTinyMarginEnd"/>
+                    <Input xmlns="sap.m" value="Dogum Yeri{Dogumyeri}" id="input10" required="true" class="sapUiTinyMarginEnd"/>
+                    <Input xmlns="sap.m" value="Mezuniyet{Mezuniyet}" id="input11" class="sapUiTinyMarginEnd"/>
+                    <Input xmlns="sap.m" value="Meslek{Meslek}" id="input12" class="sapUiTinyMarginEnd"/>
+                    <Label text="Ehliyet Sinifi" width="100%" id="label0" required="true" design="Bold" class="sapUiTinyMarginEnd"/>
+</items>
+                    </VBox>
+                    <VBox id="_IDGenVBox2" class="sapUiSmallMargin">
+                    <items>
+                    <Label id="_IDGenLabel1" labelFor="rbg2" text="Ehliyet sinifini seciniz {Ehliyetsinifi}"/>
+                    <RadioButtonGroup id="rbg2" columns="3" selectedIndex="1" class="sapUiSmallMarginBottom">
+			        <RadioButton id="RB2-1" text="A Sinifi {Ehliyetsinifi}"/>
+			        <RadioButton id="RB2-2" text="B Sinifi {Ehliyetsinifi}"/>
+			        <RadioButton id="RB2-3" text="C Sinifi {Ehliyetsinifi}"/>
+                    <RadioButton id="RB2-4" text="D Sinifi {Ehliyetsinifi}"/>
+                    <RadioButton id="RB2-5" text="E Sinifi {Ehliyetsinifi}"/>
+                    <RadioButton id="RB2-6" text="G Sinifi {Ehliyetsinifi}"/>
+                    <RadioButton id="RB2-7" text="H Sinifi {Ehliyetsinifi}"/>
+		            </RadioButtonGroup>
+                    </items>
+                    </VBox>
+
+
+
+
+                    <VBox width="100%" direction="Column" id="vbox0_1641891866845">
+                    <items>
+                        <ComboBox xmlns="sap.m" id="box0" placeholder="Talep Türü" selectedKey="{Ehliyettalep}" required="true">
+                            <items>
+                                <core:Item xmlns:core="sap.ui.core" key="Acil" text="Acil" id="item2"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Cok Acil" text="Cok Acil" id="item3"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Bakan Ref." text="Bakan Ref." id="item4"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Torpilli" text="Torpilli" id="item5"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Normal" text="Normal" id="item6"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Dusuk" text="Dusuk" id="item7"/>
+                                <core:Item xmlns:core="sap.ui.core" key="Kedi" text="Kedi" id="item8"/>
+                                </items>
+                            
+                        </ComboBox>
+                        <Button xmlns="sap.m" text="Yeni Kayit Olustur" id="button1_0" icon="sap-icon://sys-enter-2" press=".createNew" class="sapUiTinyMarginEnd"/>
+                        <Button xmlns="sap.m" text="Cikis" id="button1_1" icon="sap-icon://sys-cancel-2" press=".onNavBack" class="sapUiTinyMarginEnd"/>
+                    </items>
+                    </VBox>
+                </content>
+
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
