@@ -17,13 +17,13 @@ displayBlock="true">
     <Shell id="shell">
         <App id="app">
             <pages>
-                <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="page" title="" cd:w5g.dt.context="/EHLIYETSet">
+                <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="page" title="" cd:w5g.dt.context="/EhliyetSet">
 
 
                 <content>
 
                         <VBox width="100%" direction="Column" id="vbox1">
-                        <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{/EHLIYETSet}" alternateRowColors="true" width="60%" class="sapUiSmallMargin">
+                        <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{/EhliyetSet}" alternateRowColors="true" width="60%" class="sapUiSmallMargin">
                         		<dependents>
 			<plugins:ColumnResizer id="_IDGenColumnResizer1"/>
 		</dependents>

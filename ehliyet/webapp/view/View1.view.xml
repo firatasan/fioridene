@@ -2,50 +2,39 @@
     <Shell id="shell">
         <App id="app">
             <pages>
-                <Page id="page" title="Ehliyet Uygulaması"> 
-
-                
-<!--                                     <Image src="https://www.kayseriilkhaber.com/images/haberler/trafik-tescil-sube-mudurlugunde-randevu-sistemine-gecildi.jpg" 
-                    width="10px" height="10px" id="image1" 
-                    class="sapUiSmallMarginBegin sapUiLargeMarginTop sapUiLargeMarginBottom"/> -->
+                <Page id="page" title="Ehliyet Uygulaması">
 
 
                 <content>
-                    <VBox width="100%" direction="Column" id="vbox1">
-                        <items>
-                            <Text xmlns="sap.m" text="Merhaba. Ehliyet uygulamasına hoş geldiniz. Lütfen seçiminizi yapınız." id="text7" busyIndicatorSize="Large" class="sapUiSmallMargin"/>
-                        </items>
-                    </VBox><VBox width="100%" direction="Column" id="vbox2">
-                        <items><sap.ui.layout:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="layout0"><sap.ui.layout:content>
-                        <HBox width="100%" id="hbox0"><items><Button xmlns="sap.m" text="Yeni Ehliyet Talebi Oluştur" id="button1" icon="sap-icon://add" press=".onNavToCreate" class="sapUiTinyMargin"/>
-                        </items>
-                        </HBox>
-                        </sap.ui.layout:content></sap.ui.layout:HorizontalLayout>
-                            <VBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" width="100%" direction="Column" id="vbox2_copy">
-                                <items>
-                                    <Button xmlns="sap.m" text="Ehliyet Taleplerini Görüntüle" id="button2_copy" icon="sap-icon://show" press=".onNavToList" class="sapUiTinyMargin"/>
-                                    <Image src="https://pbs.twimg.com/media/FDgyTApWYAYnQWc?format=jpg&amp;name=large" width="140px" height="110px" id="image0" class="sapUiSmallMarginBegin sapUiLargeMarginTop sapUiLargeMarginBottom"/>
-                                    </items>
-                                
-                            </VBox>
 
+                <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form0">
+                    <sap.ui.layout.form:formContainers>
+                        <sap.ui.layout.form:FormContainer title="Kullanıcı bilgilerinizi giriniz." id="container2">
+                            <sap.ui.layout.form:formElements>
+                                <sap.ui.layout.form:FormElement label="Kullanıcı Adı" id="element2">
+                                    <sap.ui.layout.form:fields>
+                                        <Input width="40%" id="userName" placeholder="Enter Username" maxLength="25"/>
+                                    </sap.ui.layout.form:fields>
+                                </sap.ui.layout.form:FormElement>
+                                <sap.ui.layout.form:FormElement label="Şifre" id="element3">
+                                    <sap.ui.layout.form:fields>
+                                        <Input width="40%" type="Password" placeholder="Enter Password" id="password" maxLength="25"/>
+                                    </sap.ui.layout.form:fields>
+                                </sap.ui.layout.form:FormElement>
+                            </sap.ui.layout.form:formElements>
+                        </sap.ui.layout.form:FormContainer>
+                    </sap.ui.layout.form:formContainers>
+                    <sap.ui.layout.form:layout>
+                        <sap.ui.layout.form:ResponsiveGridLayout id="layout0"/>
+                    </sap.ui.layout.form:layout></sap.ui.layout.form:Form>               
+                    <FlexBox id="_IDGenFlexBox1" height="100px" alignItems="End" justifyContent="Start">
+                <Button xmlns="sap.m" text="Giriş" width="120px" press=".onLogin" id="button0" class="sapUiLargeMargin"/>              
+			</FlexBox>
+                    
 
-                            <VBox xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" width="100%" direction="Column" id="vbox4">
-                                <items>
-                                    <Button xmlns="sap.m" text="Deneme Sayfasina Git" id="button3" icon="sap-icon://show" press=".onNavToDeneme" class="sapUiTinyMargin"/>
-                                    <Button xmlns="sap.m" text="Deneme Sayfasina Git" id="button4" icon="sap-icon://show" press=".onNavToDeneme2" class="sapUiTinyMargin"/>
-                                    <Button xmlns="sap.m" text="Deneme Sayfasina Git" id="button5" icon="sap-icon://show" press=".onNavToDeneme3" class="sapUiTinyMargin"/>
-                                    </items>
-                                
-                            </VBox>
-                            
-                        </items>
-                    </VBox>
-
-
-                    <VBox width="100%" direction="Column" id="vbox3">
-                    </VBox>
                 </content>
+
+
                 </Page>
             </pages>
         </App>

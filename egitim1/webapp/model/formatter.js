@@ -15,6 +15,18 @@ sap.ui.define([], function () {
             }
 
             return parseFloat(sValue).toFixed(2);
+        },
+        stateValue : function (sValue) {
+            if (!sValue) {
+                return "";
+            }
+
+            if (parseFloat(sValue) > 20){
+                return "Error";
+            }
+            else{
+                return "Success";
+            }
         }
     };
 });

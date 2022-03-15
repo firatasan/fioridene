@@ -1,66 +1,56 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "./BaseController",
+    "sap/m/MessageBox",
     'sap/m/MessageToast',
 ],
 
 
-    function (Controller, BaseController, MessageToast) {
+    function (Controller, BaseController, MessageBox, MessageToast) {
         "use strict";
 
         return BaseController.extend("ehliyet.controller.View1", {
-            onNavToCreate : function () {
-                debugger;
-                // display the "notFound" target without changing the hash
-            this.getRouter().getTargets().display("ehliyetYap", {
-            fromTarget : "TargetView1"
-            });
-            } ,
 
-            onNavToList : function () {
-                debugger;
-                // display the "notFound" target without changing the hash
-            this.getRouter().getTargets().display("kayitlariListele", {
-            fromTarget : "TargetView1"
-            });
-            } ,
+        onLogin: function (evt) {
+
+            var girisIsmi = sap.ui.getCore().byId(this.createId("userName")).getValue();
+            var girisPass = sap.ui.getCore().byId(this.createId("password")).getValue();
+
+            //this.getView().getModel("TempDataModel").setProperty("/",{ "FirstName":fname} );
+            this.getView().getModel("TempDataModel").setProperty("/",{ "KullaniciAdi":girisIsmi} );
+            this.getView().getModel("TempDataModel").setProperty("/",{ "Sifre":girisPass} );
 
 
-        onPress: function (evt) {
 
+            if ((girisIsmi == "admin" & girisPass == "admin") || (girisIsmi == "user" & girisPass == "user")) {
 
-            var PageController = Controller.extend("sap.m.sample.Button.Page"); 
-                    MessageToast.show(evt.getSource().getId() + " Pressed");
-                    return PageController;
+                this.getRouter().getTargets().display("TargetView1");
+                sessionStorage.setItem("myKeyString", girisIsmi);
+
+            }
+            if (girisIsmi == "" || girisPass == "") {
+
+                MessageBox.warning("Kullanici adi veya Sifresi bos olamaz!!!");
+
+            }
+            if ((girisIsmi == "admin" & girisPass != "admin") || (girisIsmi == "user" & girisPass != "user")) {
+
+                MessageBox.warning("Gecersiz Kullanici adi veya Sifre!!!");
+               }
+
                 },
 
-        onNavToDeneme: function (evt) {
-
-            debugger;
-        this.getRouter().getTargets().display("deneme");
-        },
-
-        onNavToDeneme2: function (evt) {
-
-            debugger;
-        this.getRouter().getTargets().display("deneme2");
-        },
-
-        onNavToDeneme3: function (evt) {
-
-            debugger;
-        this.getRouter().getTargets().display("deneme3");
-        }
-
+                // Default button press eventi 
+                onPress: function (evt) {
+        
+                    var PageController = Controller.extend("sap.m.sample.Button.Page"); 
+                            MessageToast.show(evt.getSource().getId() + " buttonuna basildi");
+                            return PageController;
+                    },
 
 
          });
     
-
-
-
-
-         
 
 
     });

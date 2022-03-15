@@ -55,6 +55,10 @@
                                 title="{Matnr} ST 54"
                                 text="{Posnr} ST 55"/>
                             <ObjectNumber id="_IDGenObjectNumber2"
+                            state="{
+                                    path: 'Menge',
+                                    formatter: '.formatter.stateValue'
+                                }"
                                 number="{
                                     path: 'Menge',
                                     formatter: '.formatter.currencyValue'

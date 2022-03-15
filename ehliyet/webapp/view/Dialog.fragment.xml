@@ -35,17 +35,6 @@ id="inputdialog">
          singleContainerFullSize="false">
     <f:content>
 
-
-
-
-
-                    
-
-
-
-
-
-
     
 							<Label id="_IDGenLabel123"  text="TC Kimlik Numarası"/>
                             <Input id="_IDGenInput1"  xmlns="sap.m" value="{Tckimlikno}" class="sapUiTinyMarginEnd"/>

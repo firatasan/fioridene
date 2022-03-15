@@ -30,7 +30,7 @@ sap.ui.define([
                 oArgs = oEvent.getParameter("arguments");
                 oView = this.getView();
                 oView.bindElement({
-                    path : "/EHLIYETSet('" + oArgs.Tckimlikno + "')",
+                    path : "/EhliyetSet('" + oArgs.Tckimlikno + "')",
                     events : {
                         change: this._onBindingChange.bind(this),
                         dataRequested: function (oEvent) {
@@ -111,7 +111,7 @@ sap.ui.define([
                     this.getOwnerComponent().getModel().
                 
                     create("/EHLIYETSet", postData, null, function (response) {
-                    MessageToast.show("Usewrr Created Successfully with number  " + oCust1);
+                    MessageToast.show("User Created Successfully with number  " + oCust1);
                     var mylocation = location; mylocation.reload();
                     }, function (Error) {
                     MessageToast.show("Customer Creation Failed  " + oCust1);
@@ -155,7 +155,7 @@ sap.ui.define([
                         this.getView().setModel(oJSONModel, "jsonmodel");
                         var sUrl = "/sap/opu/odata/sap/ZFRT_UI_EHLIYET_SRV/";
                         var oModel = new sap.ui.model.odata.ODataModel(sUrl, true);
-                        oModel.read("/EHLIYETSet", {
+                        oModel.read("/EhliyetSet", {
                         success: function (data) {
                         oJSONModel.setData({
                         EHLIYETSet: data.results    
@@ -194,7 +194,7 @@ sap.ui.define([
                         postData.Adress = oCust10;
                         this.getOwnerComponent().getModel().
                     
-                        update("/EHLIYETSet('" + oCust1 + "')", postData, null, function (postData, response) {
+                        update("/EhliyetSet('" + oCust1 + "')", postData, null, function (postData, response) {
                         MessageToast.show("Customer update Successfully with number  " + oCust1);
                         var mylocation = location; mylocation.reload();
 

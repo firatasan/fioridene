@@ -102,7 +102,7 @@
             },
             "routes": [
                 {
-                    "name": "RouteView1",
+                    "name": "RouteView1/invoicePath",
                     "pattern": "RouteView1",
                     "target": [
                         "TargetView1"
@@ -119,8 +119,8 @@
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "View1",
-                    "viewName": "View1",
+                    "viewId": "View2",
+                    "viewName": "View2",
                     "viewLevel": 1
                 },
                 "ehliyetYap": {
