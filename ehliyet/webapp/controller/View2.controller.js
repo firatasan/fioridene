@@ -9,7 +9,7 @@ sap.ui.define([
     function (Controller, BaseController, MessageBox, MessageToast) {
         "use strict";
 
-        return BaseController.extend("ehliyet.controller.View1", {
+        return BaseController.extend("ehliyet.controller.View2", {
 
             onInit: function(){
                 var myUserType = sessionStorage.getItem('myKeyString');

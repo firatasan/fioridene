@@ -17,11 +17,19 @@ sap.ui.define([
              
             onInit: function () {
                 var oRouter = this.getRouter();
-    
                 oRouter.getRoute("edit").attachMatched(this._onRouteMatched, this);
 
-                debugger;
-    
+                debugger;  
+            },
+
+            onNavPhoto: function () {
+
+                var gelenTc = this.getView().byId("_IDGenText1").getText();
+                sessionStorage.setItem("myKeyString2", gelenTc);
+                
+                this.getRouter().getTargets().display("TargetView2");
+
+
             },
 
             _onRouteMatched : function (oEvent) {
@@ -48,38 +56,22 @@ sap.ui.define([
             _onBindingChange : function (oEvent) {
                 // No data for the binding
                 if (!this.getView().getBindingContext()) {
-
 /*                     this.getRouter().getTargets().display("TargetView1"); */
-
                     debugger;
                 }
             },
 
 
-
-
-/*                 onPress: function (oEvent) {
-                    this.getselval1 = oEvent.getSource().getSelectedItem().
-                    getBindingContext("jsonmodel").getObject().Userid;
-                    this.getView().byId("input6").setValue(this.getselval1);
-                
-                    this.getselval2 = oEvent.getSource().getSelectedItem().
-                    getBindingContext("jsonmodel").getObject().Firstname;
-                    this.getView().byId("input7").setValue(this.getselval2);
-
-
-                }, */
-
-                createNew: function () {
+            createNew: function () {
 
                     var oJSONModel = new JSONModel();
                     this.getView().setModel(oJSONModel, "jsonmodel");
                     var sUrl = "/sap/opu/odata/sap/ZFRT_UI_EHLIYET_SRV/";
                     var oModel = new sap.ui.model.odata.ODataModel(sUrl, true);
-                    oModel.read("/EHLIYETSet", {
+                    oModel.read("/EhlieytSet", {
                     success: function (data) {
                     oJSONModel.setData({
-                    EHLIYETSet: data.results    
+                    EhliyetSet: data.results    
                     /* scarrEntitySet: data.results */
                     });
                     }
@@ -108,9 +100,9 @@ sap.ui.define([
                     postData.Meslek = oCust7;
                     postData.Ehliyetsinifi = oCust8;
                     postData.Ehliyettalep = oCust9;
-                    this.getOwnerComponent().getModel().
-                
-                    create("/EHLIYETSet", postData, null, function (response) {
+
+                    this.getOwnerComponent().getModel().                
+                    create("/EhliyetSet", postData, null, function (response) {
                     MessageToast.show("User Created Successfully with number  " + oCust1);
                     var mylocation = location; mylocation.reload();
                     }, function (Error) {
@@ -158,7 +150,7 @@ sap.ui.define([
                         oModel.read("/EhliyetSet", {
                         success: function (data) {
                         oJSONModel.setData({
-                        EHLIYETSet: data.results    
+                        EhliyetSet: data.results    
                         /* scarrEntitySet: data.results */
                         });
                         }
@@ -192,8 +184,7 @@ sap.ui.define([
                         postData.Ehliyetsinifi = oCust8;
                         postData.Ehliyettalep = oCust9;
                         postData.Adress = oCust10;
-                        this.getOwnerComponent().getModel().
-                    
+                        this.getOwnerComponent().getModel().                    
                         update("/EhliyetSet('" + oCust1 + "')", postData, null, function (postData, response) {
                         MessageToast.show("Customer update Successfully with number  " + oCust1);
                         var mylocation = location; mylocation.reload();
@@ -213,5 +204,6 @@ sap.ui.define([
 
 
                 }
+
     });
 });

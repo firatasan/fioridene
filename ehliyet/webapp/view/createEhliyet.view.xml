@@ -21,18 +21,18 @@
                         </VBox>
                     <VBox width="100%" direction="Column" id="vbox0">
                     <items>
-                        <MaskInput mask="99999999999" placeholderSymbol="TC Kimlik No" placeholder="11 Haneli TC Kimlik No Giriniz {viewModel>/Tckimlikno}" id="input6" class="sapUiTinyMarginEnd"/>
+                        <MaskInput mask="99999999999" placeholderSymbol="TC Kimlik No" placeholder="TC Kimlik No" id="input6" class="sapUiTinyMarginEnd"/>
                     </items>
                     </VBox>
                     <VBox width="30%" direction="Column" id="_IDGenVBox1">
 <items>
-                    <Input xmlns="sap.m" value="Ad {viewModel>/Ad}" id="input7" required="true" class="sapUiTinyMarginEnd"/>
-                    <Input xmlns="sap.m" value="Soyad {viewModel>/Soyad}" id="input8" required="true" class="sapUiTinyMarginEnd"/>
+                    <Input xmlns="sap.m" value="Ad{viewModel>/Ad}" placeholder="Isim" id="input7" required="true" class="sapUiTinyMarginEnd"/>
+                    <Input xmlns="sap.m" value="Soyad{viewModel>/Soyad}" placeholder="Soyisim" id="input8" required="true" class="sapUiTinyMarginEnd"/>
                     <DatePicker xmlns="sap.m" id="picker1" placeholder="Dogum Tarihi{Dogumtarihi}" required="true" class="sapUiTinyMarginEnd"/>
                     <Input xmlns="sap.m" value="Dogum Yeri{Dogumyeri}" id="input10" required="true" class="sapUiTinyMarginEnd"/>
                     <Input xmlns="sap.m" value="Mezuniyet{Mezuniyet}" id="input11" class="sapUiTinyMarginEnd"/>
                     <Input xmlns="sap.m" value="Meslek{Meslek}" id="input12" class="sapUiTinyMarginEnd"/>
-                    <Label text="Ehliyet Sinifi" width="100%" id="label0" required="true" design="Bold" class="sapUiTinyMarginEnd"/>
+                    <Label text="Ehliyet Sinifi" width="100%" id="label0" design="Bold" class="sapUiTinyMarginEnd"/>
 </items>
                     </VBox>
                     <VBox id="_IDGenVBox2" class="sapUiSmallMargin">

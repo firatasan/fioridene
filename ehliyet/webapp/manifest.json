@@ -48,6 +48,7 @@
     },
     "sap.ui5": {
         "flexEnabled": true,
+        "autoPrefixId": false,
         "dependencies": {
             "minUI5Version": "1.97.0",
             "libs": {
@@ -170,7 +171,18 @@
                     "viewId": "deneme3",
                     "viewName": "deneme3",
                     "viewLevel": 2
+                },
+                "TargetView2": {
+                    "viewType": "XML",
+                    "type": "XML",
+                    "async": true,
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "View3",
+                    "viewName": "View3",
+                    "viewLevel": 4
                 }
+                
             }
         },
         "rootView": {

@@ -1,0 +1,34 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+controllerName="ehliyet.controller.View3" 
+displayBlock="true"
+xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	class="viewPadding">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="Ehliyet Uygulaması"> 
+
+	
+	<l:VerticalLayout id="_IDGenVerticalLayout1" class="sapUiLargeMargin">
+		<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+		<Button id="_IDGenButton1"
+			text="Dosya Yükle"
+			press="handleUploadPress"/>
+	</l:VerticalLayout>
+
+
+
+
+ 
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

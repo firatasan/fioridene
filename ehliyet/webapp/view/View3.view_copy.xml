@@ -1,0 +1,41 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ehliyet.controller.View3" displayBlock="true">
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="Ehliyet Uygulaması"> 
+
+                    <VBox id="_IDGenVBox1" class="sapUiTinyMargin" renderType="Bare">
+			            <MessageStrip id="_IDGenMessageStrip1"
+				            class="sapUiTinyMarginBottom"
+				            visible="{=!${device>/browser/mobile}}"
+				            showIcon="true"
+				            type="Information"
+				            text="Dosya göndermek icin lutfen dosyanizi surukleyip birakin ya da EKLE butonuna basinin." />
+			            <Label id="_IDGenLabel1" text="Notlar" />
+			            <TextArea id="TextArea" cols="200" height="100px" />
+		            </VBox>
+		
+                    <UploadCollection
+			            id="UploadCollection"
+			            maximumFilenameLength="55"
+			            maximumFileSize="10"
+			            multiple="true"
+			            sameFilenameAllowed="true"
+			            instantUpload="false"
+			            noDataDescription="Dosya göndermek icin lutfen dosyanizi surukleyip birakin ya da EKLE butonuna basinin."
+			            change="onChange"
+			            fileDeleted="onFileDeleted"
+			            filenameLengthExceed="onFilenameLengthExceed"
+			            fileSizeExceed="onFileSizeExceed"
+			            typeMissmatch="onTypeMissmatch"
+			            uploadComplete="onUploadComplete"
+			            beforeUploadStarts="onBeforeUploadStarts" />
+		            <Button id="Button" text="Dosya Gönder" press="onStartUpload" />
+
+
+ 
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

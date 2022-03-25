@@ -41,6 +41,7 @@ controllerName="ehliyet.controller.edit" busyIndicatorDelay="0"><Page id="employ
 
 <Button xmlns="sap.m" text="Degistir" id="button0" icon="sap-icon://edit" press=".onOpenDialog" class="sapUiTinyMargin"/>
 <Button xmlns="sap.m" text="Ana Menuye Dön" id="button1" icon="sap-icon://edit" press=".onNavBack2" class="sapUiTinyMargin"/>
+<Button xmlns="sap.m" text="Foto Ekle" id="button2" icon="sap-icon://edit" press=".onNavPhoto" class="sapUiTinyMargin"/>
 
 
 

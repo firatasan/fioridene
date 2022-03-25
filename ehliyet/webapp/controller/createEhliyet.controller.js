@@ -35,7 +35,7 @@ sap.ui.define([
                     this.getView().setModel(oJSONModel, "jsonmodel");
                     var sUrl = "/sap/opu/odata/sap/ZFRT_UI_EHLIYET_SRV/";
                     var oModel = new sap.ui.model.odata.ODataModel(sUrl, true);
-                    oModel.read("/EHLIYETSet", {
+                    oModel.read("/EhliyetSet", {
                     success: function (data) {
                     oJSONModel.setData({
                     EHLIYETSet: data.results    
@@ -69,7 +69,7 @@ sap.ui.define([
                     postData.Ehliyetsinifi = oCust8;
                     postData.Ehliyettalep = oCust9;
                     this.getOwnerComponent().getModel().
-                    create("/EHLIYETSet", postData, null, function (response) {
+                    create("/EhliyetSet", postData, null, function (response) {
                     MessageToast.show("Usewrr Created Successfully with number  " + oCust1);
                     var mylocation = location; mylocation.reload();
                     }, function (Error) {

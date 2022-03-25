@@ -1,0 +1,55 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+xmlns="sap.m" 
+controllerName="ehliyet.controller.View3" 
+displayBlock="true"
+xmlns:l="sap.ui.layout"
+xmlns:u="sap.ui.unified"
+class="viewPadding">
+
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="Ehliyet Uygulaması"> 
+
+                    	<l:VerticalLayout id="_VerticalLayout1">
+
+
+
+
+		<u:FileUploader id="fileUploaderFS"
+			name="FileName"
+
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"
+			change="handleValueChange"
+			typeMissmatch="handleTypeMissmatch"
+			style="Emphasized"
+			fileType="txt,jpg"
+			placeholder="Choose a file for Upload...">
+				<u:parameters>
+					<u:FileUploaderParameter id="_IDGenFileUploaderParameter1"
+						name="Accept-CH"
+						value="Viewport-Width"/>
+					<u:FileUploaderParameter id="_IDGenFileUploaderParameter2"
+						name="Accept-CH"
+						value="Width"/>
+					<u:FileUploaderParameter id="_IDGenFileUploaderParameter3"
+						name="Accept-CH-Lifetime"
+						value="86400"/>
+				</u:parameters>
+			</u:FileUploader>
+
+		<!-- <Button id="_IDGenButton1"
+			text="Upload File"
+			press="handleUploadPress"/> -->
+
+        <Button id="_acceptButton2" text="Upload" type="Accept" press="onUploadFile"/>
+
+
+	</l:VerticalLayout>
+ 
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
