@@ -1,0 +1,47 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+ xmlns="sap.m" 
+ xmlns:l="sap.ui.layout" 
+ xmlns:u="sap.ui.unified" 
+ controllerName="ehliyet.controller.View3" 
+ displayBlock="true" class="viewPadding">
+
+    <Shell id="shell">
+        <App id="app">
+
+<Page id="_IDGenPage1" title="Upload The File">
+<content>
+
+<Label text="Dosyayi buraya atiniz" width="100%" id="__label0"/>
+<u:FileUploader 
+id="fileUploader" 
+useMultipart="false" 
+name="myFileUpload" 
+uploadUrl="{TempDataModel>/uploadUrl}" 
+width="400px" 
+tooltip="Upload your file to the local server" 
+uploadComplete="handleUploadComplete"/>
+
+<Button id="_IDGenButton1" text="Upload File" press="handleUploadPress"/>
+ 
+<!-- <List id="itemlist" headerText="Dosyalar" class="sapUiResponsiveMargin" width="auto" items="{TempDataModel>/downloadUrl}">
+<items>
+<ObjectListItem id="listItem" title="BU NE KI {Data>Filename}">
+<ObjectAttribute id="_IDGenObjectAttribute1" text="Bu ne olak" active="true" press="fun"/>
+</ObjectListItem>
+</items>
+</List> -->
+</content>
+</Page>
+
+
+
+
+        </App>
+    </Shell>
+</mvc:View>
+
+
+
+
+
+				
